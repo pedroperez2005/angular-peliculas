@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+
+.primary {
+  @include mat.theme(
+    (
+      color: mat.$azure-palette,
+    )
+  );
+}
+.secondary {
+  @include mat.theme(
+    (
+      color: mat.$magenta-palette,
+    )
+  );
+}
+.warn {
+  @include mat.theme(
+    (
+      color: mat.$red-palette,
+    )
+  );
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  height: fit-content;
+}
