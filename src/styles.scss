@@ -2,33 +2,42 @@
 @use "@angular/material" as mat;
 
 .primary {
-  @include mat.theme(
-    (
-      color: mat.$azure-palette,
-    )
-  );
+  @include mat.theme((color: mat.$azure-palette,
+    ));
 }
+
 .secondary {
-  @include mat.theme(
-    (
-      color: mat.$magenta-palette,
-    )
-  );
+  @include mat.theme((color: mat.$magenta-palette,
+    ));
 }
+
 .warn {
-  @include mat.theme(
-    (
-      color: mat.$red-palette,
-    )
-  );
+  @include mat.theme((color: mat.$red-palette,
+    ));
 }
 
 html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   height: fit-content;
+}
+
+form button {
+  margin-right: 15px;
+}
+
+mat-form-field {
+  width: 100%;
+  max-width: 500px;
+  display: block !important;
+  margin-top: 1rem;
+}
+
+.contenedor-botones {
+  margin-top: 1rem;
 }

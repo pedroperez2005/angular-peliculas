@@ -1,18 +1,21 @@
 import { Component, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
+import { FormularioGeneroComponent } from "../formulario-genero/formulario-genero.component";
+import { GeneroCreacionDTO } from '../generos';
 
 @Component({
   selector: 'app-crear-generos',
-  imports: [MatButtonModule],
+  imports: [
+    FormularioGeneroComponent
+  ],
   templateUrl: './crear-generos.component.html',
   styleUrl: './crear-generos.component.scss',
 })
 export class CrearGenerosComponent {
-  router = inject(Router);
+  // se utiliza private para no utilizarlos accidentalmente en el template
+  private router = inject(Router);
 
-  guardarCambios() {
-    // logica
-    this.router.navigate(['generos']);
+  guardarCambios(genero: GeneroCreacionDTO) {
+    console.log('Creando el género ', genero);
   }
 }
