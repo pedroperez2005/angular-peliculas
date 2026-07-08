@@ -1,1 +1,6 @@
-<p>crear-pelicula works!</p>
+<h2>Crear Película</h2>
+
+<app-formulario-peliculas [generosNoSeleccionados]="generosNoSeleccionados"
+    [generosSeleccionados]="generosSeleccionados" [cinesNoSeleccionados]="cinesNoSeleccionados"
+    [cinesSeleccionados]="cinesSeleccionados" [actoresSeleccionados]="actoresSeleccionados"
+    (posteoFormulario)="guardarCambios($event)"></app-formulario-peliculas>

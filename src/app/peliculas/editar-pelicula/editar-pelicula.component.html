@@ -1,1 +1,6 @@
-<p>El id de la película a editar es: {{ id }}</p>
+<h2>Editar película</h2>
+
+<app-formulario-peliculas [modelo]="pelicula" [generosNoSeleccionados]="generosNoSeleccionados"
+    [generosSeleccionados]="generosSeleccionados" [cinesNoSeleccionados]="cinesNoSeleccionados"
+    [cinesSeleccionados]="cinesSeleccionados" [actoresSeleccionados]="actoresSeleccionados"
+    (posteoFormulario)="guardarCambios($event)"></app-formulario-peliculas>
